@@ -1,12 +1,11 @@
 
 # DotnetCore 
 # .NET Core build folders
-bin/
-obj/
+FuncionarioApi/bin/
+FuncionarioApi/obj/
 
-# Common node modules locations
-/node_modules
-/wwwroot/node_modules
+FuncionarioApi.Tests/bin/
+FuncionarioApi.Tests/obj/
 
 # Docker Volumes
-data_db/
+FuncionarioApi/data_db/
