@@ -1,0 +1,23 @@
+# Docker Compose do Projeto FuncionarioAPI
+
+version: '3.1'
+
+services:
+
+  api:
+    build: .
+    ports:
+      - "80:80"
+    depends_on:
+      - database
+
+  database:
+    build:
+      context: ./Database
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin123
+    ports:
+      - "3306:3306"
+    volumes:
+      - './data_db:/data/db'
